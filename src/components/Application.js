@@ -5,7 +5,6 @@ import "components/Application.scss";
 import axios from 'axios';
 
 
-const [days, setDays] = useState([]);
 
 const appointments = [
   {
@@ -67,7 +66,16 @@ const appointments = [
 
 
 export default function Application(props) {
+
   const [day, setDay] = useState("Monday");
+
+  useEffect(() => {
+    axios.get({
+      method: "GET",
+      url: `/api/days`
+    })
+}, [])
+
   return (
     <main className="layout">
       <section className="sidebar">

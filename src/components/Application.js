@@ -95,7 +95,11 @@ export default function Application(props) {
         url: `/api/interviewers`
       }),
     ]).then(([days, appointments, interviewers]) => {
-      setState({ ...state, days: days.data, appointments: appointments.data, interviewers: interviewers.data})
+      setState({ 
+        ...state, 
+        days: days.data, 
+        appointments: appointments.data, 
+        interviewers: interviewers.data})
     }).catch(error => console.log(error));
   }, []);
     
@@ -125,7 +129,9 @@ export default function Application(props) {
         {
           appointments.map(appointment => {
             return (
-              <Appointment key={appointment.id} {...appointment} />
+              <Appointment 
+              key={appointment.id} 
+              {...appointment} />
             )
             })
         }

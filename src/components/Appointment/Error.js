@@ -4,6 +4,10 @@ import React from "react";
 const classNames = require('classnames');
 
 export default function Error(props) {
+
+  const close = function() {
+    props.onClose();
+  }
     
   return (
    <main className="appointment__card appointment__card--error">
@@ -11,11 +15,10 @@ export default function Error(props) {
         <h1 className="text--semi-bold">Error</h1>
         <h3 className="text--light">{props.message}</h3>
        </section>
-       <img
+       <img onClick={close}
         className="appointment__error-close"
         src="images/close.png"
         alt="Close"
-        onClick={props.onClose}
        />
    </main>
   );

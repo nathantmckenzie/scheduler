@@ -2,14 +2,12 @@ import React from "react";
 
 import "components/DayListItem.scss";
 
-const classNames = require('classnames');
-
-
+const classNames = require("classnames");
 
 export default function DayListItem(props) {
-  let dayClass = classNames('day-list__item', { 
-     'day-list__item--selected': props.selected,
-     'day-list__item--full' : !props.spots
+  let dayClass = classNames("day-list__item", {
+    "day-list__item--selected": props.selected,
+    "day-list__item--full": !props.spots,
   });
   let formatSpots = () => {
     if (props.spots > 1) {
@@ -22,7 +20,7 @@ export default function DayListItem(props) {
   };
   return (
     <li onClick={() => props.setDay(props.name)}>
-      <h2 className={dayClass}>{props.name}</h2> 
+      <h2 className={dayClass}>{props.name}</h2>
       <h3 className={dayClass}>{formatSpots()}</h3>
     </li>
   );

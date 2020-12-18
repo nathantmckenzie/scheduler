@@ -1,25 +1,22 @@
 import React from "react";
 
-
-const classNames = require('classnames');
-
 export default function Error(props) {
-
-  const close = function() {
+  const close = function () {
     props.onClose();
-  }
-    
+  };
+
   return (
-   <main className="appointment__card appointment__card--error">
+    <main className="appointment__card appointment__card--error">
       <section className="appointment__error-message">
         <h1 className="text--semi-bold">Error</h1>
         <h3 className="text--light">{props.message}</h3>
-       </section>
-       <img onClick={close}
+      </section>
+      <img
+        onClick={close}
         className="appointment__error-close"
         src="images/close.png"
         alt="Close"
-       />
-   </main>
+      />
+    </main>
   );
 }

@@ -1,10 +1,9 @@
 import React from "react";
 
-const classNames = require('classnames');
+const classNames = require("classnames");
 
 export default function Status(props) {
-    
-   return (
+  return (
     <main className="appointment__card appointment__card--status">
       <img
         className="appointment__status-image"
@@ -12,7 +11,6 @@ export default function Status(props) {
         alt="Loading"
       />
       <h1 className="text--semi-bold">{props.message}</h1>
-   </main>
-
-   );
- }
+    </main>
+  );
+}

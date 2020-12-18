@@ -23,3 +23,8 @@ npm test
 ```sh
 npm run storybook
 ```
+
+## Screenshots
+!["Home Page"](https://github.com/nathantmckenzie/scheduler/blob/master/docs/home-page.png?raw=true)
+!["Appointment Form"](https://github.com/nathantmckenzie/scheduler/blob/master/docs/appointment-form.png)
+!["Booked Appointment"](https://github.com/nathantmckenzie/scheduler/blob/master/docs/booked-appointment.png)

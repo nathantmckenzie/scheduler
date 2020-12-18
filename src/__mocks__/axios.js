@@ -88,5 +88,14 @@ const fixtures = {
           statusText: "OK",
         })
       }
+    }),
+
+    delete: jest.fn(url => {
+      if (url.includes("/api/appointments/")) {
+        return Promise.resolve({
+          status: 204,
+          statusText: "No content"
+        });
+      }
     })
   }

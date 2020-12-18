@@ -1,5 +1,7 @@
 # Interview Scheduler
 
+Interviewer Scheduler is a single page application that allows users to book, edit, and delete student interview appointments. This app was built using React.
+
 ## Setup
 
 Install dependencies with `npm install`.
